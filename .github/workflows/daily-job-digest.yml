@@ -28,4 +28,12 @@ jobs:
           GMAIL_USER: ${{ secrets.GMAIL_USER }}
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
           TO_EMAIL: ${{ secrets.TO_EMAIL }}
-        run: python job_bot.py
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          MAX_RESULTS: ${{ secrets.MAX_RESULTS }}
+          COMPANIES: ${{ secrets.COMPANIES }}
+          ROLE_QUERY: ${{ secrets.ROLE_QUERY }}
+          SITES_HINT: ${{ secrets.SITES_HINT }}
+        run: |
+          set -o errexit
+          set -o xtrace
+          python job_bot.py
