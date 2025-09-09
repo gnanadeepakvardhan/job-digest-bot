@@ -70,9 +70,9 @@ def main():
     GMAIL_APP_PASSWORD = env("GMAIL_APP_PASSWORD", required=True)
     TO_EMAIL = env("TO_EMAIL", required=True)
     MAX_RESULTS = int(env("MAX_RESULTS", "20"))
-    COMPANIES = [c.strip() for c in env("COMPANIES", "Google, Meta, Amazon, Apple, Netflix, Microsoft, OpenAI, Stripe, Databricks, DoorDash, Airbnb, Uber").split(",") if c.strip()]
-    ROLE_QUERY = env("ROLE_QUERY", "entry level OR new grad full stack OR software engineer")
-    SITES_HINT = env("SITES_HINT", "site:boards.greenhouse.io OR site:jobs.lever.co OR site:careers.microsoft.com OR site:amazon.jobs OR site:meta.com/careers OR site:apple.com/careers OR site:google.com/about/careers OR site:netflixjobs.com OR site:about.google")
+    COMPANIES = [c.strip() for c in env("COMPANIES", "Google, Meta, Amazon, Apple, Netflix, Microsoft, OpenAI, Stripe, Databricks, DoorDash, Airbnb, Uber, Nvidia, Snowflake, Palantir, Shopify, Twilio, Zoom, Atlassian, GitHub, Roblox, SpaceX").split(",") if c.strip()]
+    ROLE_QUERY = env("ROLE_QUERY", "entry level OR new grad OR software engineer OR full stack OR backend OR frontend OR mobile OR devops OR SDE-1 OR grad program")
+    SITES_HINT = env("SITES_HINT", "site:boards.greenhouse.io OR site:jobs.lever.co OR site:careers.microsoft.com OR site:amazon.jobs OR site:meta.com/careers OR site:apple.com/careers OR site:google.com/about/careers OR site:netflixjobs.com OR site:indeed.com OR site:linkedin.com/jobs OR site:angel.co OR site:workat.tech OR site:hackerrank.com/jobs OR site:github.com/careers OR site:stackoverflow.com/jobs OR site:wellfound.com OR site:builtinaustin.com OR site:remoteok.io OR site:weworkremotely.com OR site:remotive.io")
     DAYS = int(env("DAYS", "2"))  # search window via query only
 
     jobs = []
